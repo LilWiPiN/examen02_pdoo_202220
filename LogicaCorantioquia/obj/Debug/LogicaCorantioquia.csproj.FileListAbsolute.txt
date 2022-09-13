@@ -1,0 +1,6 @@
+C:\Users\kramk\source\repos\ReforestacionAMVA\LogicaCorantioquia\obj\Debug\LogicaCorantioquia.csproj.AssemblyReference.cache
+C:\Users\kramk\source\repos\ReforestacionAMVA\LogicaCorantioquia\obj\Debug\LogicaCorantioquia.csproj.CoreCompileInputs.cache
+C:\Users\kramk\source\repos\ReforestacionAMVA\LogicaCorantioquia\bin\Debug\LogicaCorantioquia.dll
+C:\Users\kramk\source\repos\ReforestacionAMVA\LogicaCorantioquia\bin\Debug\LogicaCorantioquia.pdb
+C:\Users\kramk\source\repos\ReforestacionAMVA\LogicaCorantioquia\obj\Debug\LogicaCorantioquia.dll
+C:\Users\kramk\source\repos\ReforestacionAMVA\LogicaCorantioquia\obj\Debug\LogicaCorantioquia.pdb

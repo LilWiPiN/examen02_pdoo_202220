@@ -1,0 +1,10 @@
+C:\Users\kramk\source\repos\ReforestacionAMVA\ReforestacionAMVA\bin\Debug\ReforestacionAMVA.exe.config
+C:\Users\kramk\source\repos\ReforestacionAMVA\ReforestacionAMVA\bin\Debug\ReforestacionAMVA.exe
+C:\Users\kramk\source\repos\ReforestacionAMVA\ReforestacionAMVA\bin\Debug\ReforestacionAMVA.pdb
+C:\Users\kramk\source\repos\ReforestacionAMVA\ReforestacionAMVA\obj\Debug\ReforestacionAMVA.csproj.AssemblyReference.cache
+C:\Users\kramk\source\repos\ReforestacionAMVA\ReforestacionAMVA\obj\Debug\ReforestacionAMVA.csproj.CoreCompileInputs.cache
+C:\Users\kramk\source\repos\ReforestacionAMVA\ReforestacionAMVA\obj\Debug\ReforestacionAMVA.exe
+C:\Users\kramk\source\repos\ReforestacionAMVA\ReforestacionAMVA\obj\Debug\ReforestacionAMVA.pdb
+C:\Users\kramk\source\repos\ReforestacionAMVA\ReforestacionAMVA\bin\Debug\LogicaCorantioquia.dll
+C:\Users\kramk\source\repos\ReforestacionAMVA\ReforestacionAMVA\bin\Debug\LogicaCorantioquia.pdb
+C:\Users\kramk\source\repos\ReforestacionAMVA\ReforestacionAMVA\obj\Debug\ReforestacionAMVA.csproj.CopyComplete
