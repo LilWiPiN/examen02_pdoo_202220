@@ -8,7 +8,7 @@ namespace LogicaCorantioquia
 {
     public class ActividadReforestacionProveedor : ActividadReforestacion
     {
-        public ushort galones;
+        private ushort galones;
 
         public ActividadReforestacionProveedor() : base()
         {

@@ -11,7 +11,7 @@ namespace LogicaCorantioquia
         private ActividadReforestacion[] actividades;
         private byte[] actividadesPorMunicipio;
         private uint[] arbolesSobrevivientesPorMunicipio;
-        private byte actividadesComunidadExitosas, actividadesProveedoresExitosas;
+        private byte actividadesComunidadExitosas, actividadesProveedorExitosas;
         private uint[] aguaUtilizadaPorMunicipio;
 
         public Corantioquia()
@@ -20,7 +20,7 @@ namespace LogicaCorantioquia
             actividadesPorMunicipio = new byte[10];
             arbolesSobrevivientesPorMunicipio = new uint[10];
             actividadesComunidadExitosas = 0;
-            actividadesProveedoresExitosas = 0;
+            actividadesProveedorExitosas = 0;
             aguaUtilizadaPorMunicipio = new uint[10];
 
             InicializaActividad();
@@ -33,10 +33,35 @@ namespace LogicaCorantioquia
             actividadesPorMunicipio = new byte[10];
             arbolesSobrevivientesPorMunicipio = new uint[10];
             actividadesComunidadExitosas = 0;
-            actividadesProveedoresExitosas = 0;
+            actividadesProveedorExitosas = 0;
             aguaUtilizadaPorMunicipio = new uint[10];
 
             InicializaActividad();
+        }
+
+        public byte[] ActividadesPorMunicipio
+        {
+            get { return actividadesPorMunicipio; }
+        }
+
+        public uint[] ArbolesSobrevivientesPorMunicipio
+        {
+            get { return arbolesSobrevivientesPorMunicipio; }
+        }
+
+        public byte ActividadesComunidadExitosas
+        {
+            get { return actividadesComunidadExitosas; }
+        }
+
+        public byte ActividadesProveedorExitosas
+        {
+            get { return actividadesProveedorExitosas; }
+        }
+
+        public uint[] AguaUtilizadaPorMunicipio
+        {
+            get { return aguaUtilizadaPorMunicipio; }
         }
 
         public void InicializaActividad()
@@ -94,15 +119,8 @@ namespace LogicaCorantioquia
             }
         }
 
-        public void TotalizaDatos()
+        public void TotalActividadesPorMunicipio()
         {
-            actividadesPorMunicipio = new byte[10];
-            arbolesSobrevivientesPorMunicipio = new uint[10];
-            actividadesComunidadExitosas = 0;
-            actividadesProveedoresExitosas = 0;
-            aguaUtilizadaPorMunicipio = new uint[10]; //???
-
-            //Actividades Por Municipio
             for (byte i = 0; i < actividades.Length; i++)
             {
                 //Medellin
@@ -145,8 +163,10 @@ namespace LogicaCorantioquia
                 if (actividades[i].Municipio == "Caldas")
                     actividadesPorMunicipio[9]++;
             }
+        }
 
-            //Arboles Sobrevivientes Por Municipios
+        public void TotalArbolesSobrevivientesPorMunicipios()
+        {
             for (byte i = 0; i < actividades.Length; i++)
             {
                 //Medellin
@@ -189,21 +209,25 @@ namespace LogicaCorantioquia
                 if (actividades[i].Municipio == "Caldas")
                     arbolesSobrevivientesPorMunicipio[9] += actividades[i].ArbolesSobrevivientes;
             }
+        }
 
-            //Actividad comunidad-proveedor exitoso
+        public void TotalActividadTipoExitoso()
+        {
             for (byte i = 0; i < actividades.Length; i++)
             {
                 //ActividadComunidad
                 if (actividades[i].Tipo == "Comunidad" && actividades[i].EsExitoso)
                     actividadesComunidadExitosas++;
 
-                //ActividadComunidad
+                //ActividadProveedor
                 if (actividades[i].Tipo == "Proveedor" && actividades[i].EsExitoso)
-                    actividadesProveedoresExitosas++;
+                    actividadesProveedorExitosas++;
             }
+        }
 
+        public void TotalAguaUtilizadaPorMunicipio()
+        {
             //NO SUPE COMO SACAR EL .Galones, me toco usar (uint)(actividades[i].ArbolesSobrevivientes * 10)
-            //Agua Utilizada Por Municipio
             for (byte i = 0; i < actividades.Length; i++)
             {
                 if (actividades[i].Tipo == "Proveedor")
@@ -248,8 +272,8 @@ namespace LogicaCorantioquia
                     if (actividades[i].Municipio == "Caldas")
                         aguaUtilizadaPorMunicipio[9] += (uint)(actividades[i].ArbolesSobrevivientes * 10);
                 }
-            }  
-        }
+            }
+        }  
 
         public string ObtieneInfo()
         {
@@ -286,7 +310,7 @@ namespace LogicaCorantioquia
                                 $"La Estrella: {arbolesSobrevivientesPorMunicipio[8]}\n" +
                                 $"Caldas: {arbolesSobrevivientesPorMunicipio[9]}\n" +
                                 $"\nActividades por la comunidad exitosas: {actividadesComunidadExitosas}\n" +
-                                $"\nActividades por proveedor exitosas: {actividadesProveedoresExitosas}\n" +
+                                $"\nActividades por proveedor exitosas: {actividadesProveedorExitosas}\n" +
                                 $"\nAgua utilizada por municipio: \n" +
                                 $"Medellin: {aguaUtilizadaPorMunicipio[0]}\n" +
                                 $"Barbosa: {aguaUtilizadaPorMunicipio[1]}\n" +

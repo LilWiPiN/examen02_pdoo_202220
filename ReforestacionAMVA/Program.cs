@@ -18,7 +18,10 @@ namespace ReforestacionAMVA
 
             Corantioquia corantioquia = new Corantioquia(new ActividadReforestacion[actividades]);
 
-            corantioquia.TotalizaDatos();
+            corantioquia.TotalActividadesPorMunicipio();
+            corantioquia.TotalArbolesSobrevivientesPorMunicipios();
+            corantioquia.TotalActividadTipoExitoso();
+            corantioquia.TotalAguaUtilizadaPorMunicipio();
 
             Console.WriteLine(corantioquia.ObtieneInfo());
             Console.WriteLine(corantioquia.ToString());
